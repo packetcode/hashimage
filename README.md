@@ -17,17 +17,17 @@ FEATURES
 
 Minimum Setup
 ------------
-Include the hashimage.php file in the code
 ```php
  //include the file
  require_once 'path/to/hashimage.php'; 
  //Create an object of hashimage class
  $image = new hashimage();
+ //load the image and dsiplay to browser
+ $image->load('path/to/image.jpg')->show();
 ```
 
 Advanced Setup
 -------------
-Include the hashimage.php file in the code
 ```php
  require_once 'path/to/hashimage.php'; 
 ```
