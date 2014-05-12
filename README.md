@@ -26,14 +26,27 @@ Minimum Setup
  $image->load('path/to/image.jpg')->show();
 ```
 
-Advanced Setup
+Resizing Image
 -------------
+Resizing of images can be done with function resize which takes two optional parameters.By default it reduces the image by 50% without and arguments.
 ```php
+
  require_once 'path/to/hashimage.php'; 
-```
-Create an object of hashimage class
-```php
  $image = new hashimage();
+
+ $image->load('path/to/image.jpg')
+ 		->resize() //default 50% reduction
+ 			->show();
+```
+To reduce to 25% we can do it as below
+```php
+
+ require_once 'path/to/hashimage.php'; 
+ $image = new hashimage();
+
+ $image->load('path/to/image.jpg')
+ 		->resize('25%')
+ 			->show();
 ```
 
 
