@@ -1,6 +1,6 @@
 [![HashImage](images/watermark.png)](http://hashimage.com/)
 
-A Simple image manipulation library using php. Its written with object oriented principles with a footprint of hardly 15kb, the php method chaining and anonymous functions make the code very simple to use and performance is pretty good. you can give a try :) 
+**A Simple image manipulation library using php. Its written with object oriented principles with a footprint of hardly 15kb, the php method chaining and anonymous functions make the code very simple to use and performance is pretty good. you can give a try :) **
 
 website: http://www.hashimage.com
 
@@ -17,7 +17,20 @@ FEATURES
 9. 12+ Preset Filters 
 10. Support for jpeg/png/gif
 
-Minimal Setup
+## Table of Contents
+
+* [Basic Setup](#basic-setup)
+* [Resizing ](#resizing-image)
+* [Cropping](#cropping-)
+* [Flipping](#flipping-)
+* [Rotating ](#rotate-)
+* [Alter Properties](#alter-properties)
+* [Watermark](#watermark-)
+* [Adding Layer](#add-layer)
+* [Custom Editing](#custom-editing)
+* [Applying Preset Filters](#applying-preset-filters)
+
+Basic Setup
 ------------
 ```php
  //include the file
