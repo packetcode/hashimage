@@ -1,6 +1,8 @@
 HashImage
 ======
-A Simple image manipulation library using php. Its written with object oriented principles with a footprint of hardly 15kb, the php method chaining and anonymous functions make the code very simple to use and performance is pretty good. you can give a try :)
+A Simple image manipulation library using php. Its written with object oriented principles with a footprint of hardly 15kb, the php method chaining and anonymous functions make the code very simple to use and performance is pretty good. you can give a try :) 
+
+website: http://www.hashimage.com
 
 FEATURES
 --------
@@ -152,8 +154,62 @@ To add a watermark we can use watermark method which takes an anonymous function
  // other positions 
  //  - topright,topcenter,topleft
  //  - centerright,center,centerleft	
- //  - bottomright,bottomcenter,bottomleft			
+ //  - bottomright,bottomcenter,bottomleft	
+
+ // parameters that can be altered are
+ //  - position,size,opacity,padding,	
 ```
+```php
+ // Custom position of watermark
+ $image->load('path/to/image.jpg') //load image
+			->watermark(function($obj){
+						$obj->x = '200';
+						$obj->y = '100';
+					}) //create a watermark at position x=200px y=100px
+				->show(); //display the image
+```
+Add Layer
+--------
+Using hashimage overlay function its very easy to add a filter png image. It takes two paramters, first being filter image name and second is opacity. Make sure the png image is available in filter folder and filter folder path is correctly used.
+```php
+ //set the filter folder path
+ $image->filterfolder = 'path/to/filters/';
+ 
+ $image->load('path/to/image.jpg') //load image
+			->overlay('cracks',90) //overlay the filter cracks with 90units opacity
+				->show(); //display the image				
+```
+Custom Editing
+-------
+We can run multiple alterations on the loaded image as follow
+```php
+ //set the filter folder path
+ $image->filterfolder = 'path/to/filters/';
+ 
+ //set the watermark image path
+ $image->watermark->image = '../images/watermark.png';
+	
+ $image->load('path/to/image.jpg') //load image
+			->resize('400px') //resize image by 400px in width
+				->filter('lift') //load filter lift
+				 ->watermark() //add the watermark
+					->show(); //display the image							
+```
+
+Applying Preset Filters
+--------
+To make it easy some custom filter settings have be coded and they can be used by using function filters.It takes filter preset name as parameter. Make sure the filter folder is set properly.
+```php
+ //set the filter folder path
+ $image->filterfolder = 'path/to/filters/';
+ 
+ $image->load('path/to/image.jpg') //load image
+			->filter('antique') //load filter antique
+				->show(); //display the image				
+```
+
+----------------------------------------------------------------
+Developed by :Krishna Teja @www.packetcode.com 
 
 
 
