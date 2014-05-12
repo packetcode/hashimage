@@ -18,8 +18,9 @@ FEATURES
 Installation
 ------------
 Include the hashimage.php file in the code
-
-<?php require_once 'path/to/hashimage.php'; ?>
+```php
+ require_once 'path/to/hashimage.php'; 
+```
 
 
 
