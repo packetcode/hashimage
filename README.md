@@ -15,7 +15,7 @@ FEATURES
 9. 12+ Preset Filters 
 10. Support for jpeg/png/gif
 
-Minimum Setup
+Minimal Setup
 ------------
 ```php
  //include the file
@@ -30,22 +30,38 @@ Resizing Image
 -------------
 Resizing of images can be done with function resize which takes two optional parameters.By default it reduces the image by 50% without and arguments.
 ```php
-
- require_once 'path/to/hashimage.php'; 
- $image = new hashimage();
-
  $image->load('path/to/image.jpg')
  		->resize() //default 50% reduction
  			->show();
 ```
 To reduce to 25% we can do it as below
 ```php
-
- require_once 'path/to/hashimage.php'; 
- $image = new hashimage();
-
  $image->load('path/to/image.jpg')
  		->resize('25%')
+ 			->show();
+```
+To reduce the width to 500px by maintaining aspect ratio
+```php
+ $image->load('path/to/image.jpg')
+ 		->resize('500px','width')
+ 			->show();
+```
+To reduce the height to 300px by maintaining aspect ratio
+```php
+ $image->load('path/to/image.jpg')
+ 		->resize('300px','height')
+ 			->show();
+```
+To resize to a square box of dimension 600px
+```php
+ $image->load('path/to/image.jpg')
+ 		->resize('600px','square')
+ 			->show();
+```
+Custom width and height
+```php
+ $image->load('path/to/image.jpg')
+ 		->resize('500px','400px') // arguments can be with or without px i.e. 300 or 300px gives same result
  			->show();
 ```
 
