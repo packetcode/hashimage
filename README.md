@@ -108,6 +108,55 @@ Rotate function makes it easy to rotate the image to angle in any direction. It 
 			->rotate('anticlockwise',60) //rotate the image 60 degree anticlockwise
 				->show(); //display the image
 ```
+Alter Properties
+-------------
+Using Change function we can alter the image brightness,contrast,smoothness and pixelate. It takes two parameters, first the property and second the level ranging -255 to +255
+```php
+ $image->load('path/to/image.jpg')
+			->change('brightness',60) //increase the brightness by 60 units
+				->show(); //display the image
+```
+```php
+ $image->load('path/to/image.jpg')
+			->change('contrast',-30) //reduces the contrast by 30 units
+				->show(); //display the image
+```
+```php
+ $image->load('path/to/image.jpg')
+			->change('smoothness',20) //increase the smoothness by 20 units
+				->show(); //display the image
+```
+```php
+ $image->load('path/to/image.jpg')
+			->change('pixelate',20) //distorts the pixelate by 20 units
+				->show(); //display the image
+```
+Watermark
+-----------
+To add a watermark we can use watermark method which takes an anonymous function to update the watermark settings. For this to work properly make sure the watermark image path is set correctly.
+```php
+ //set the watermark image path
+ $image->watermark->image = 'path/to/watermark.png';
+
+ $image->load('path/to/image.jpg') //load image
+			->watermark() //create a watermark on the image on right bottom corner(default position)
+				->show(); //display the image
+```
+```php
+ $image->load('path/to/image.jpg') //load image
+			->watermark(function($obj){
+						$obj->position = 'center';
+						$obj->size = '100';
+					}) //create a watermark of 100px and position center
+				->show(); //display the image
+ // other positions 
+ //  - topright,topcenter,topleft
+ //  - centerright,center,centerleft	
+ //  - bottomright,bottomcenter,bottomleft			
+```
+
+
+
 
 
 

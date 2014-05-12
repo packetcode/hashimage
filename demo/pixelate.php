@@ -8,7 +8,7 @@
 	$imagefile = '../images/man.jpg';
 
 	$image->load($imagefile) //load image
-			->change('pixelate',20) //increase the pixelate by 20 units
+			->change('pixelate',20) //distorts the pixelate by 20 units
 				->show(); //display the image
 	/*
 		Change Function Options:

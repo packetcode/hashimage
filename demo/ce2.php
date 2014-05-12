@@ -18,5 +18,5 @@
 					->watermark(function($mark){
 						$mark->position = 'center';
 						$mark->size = '100';
-					}) //add a watermark but change its posiiton and size
+					}) //add a watermark of size 100px and position centered
 					->show(); //display the image
