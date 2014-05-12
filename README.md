@@ -15,12 +15,28 @@ FEATURES
 9. 12+ Preset Filters 
 10. Support for jpeg/png/gif
 
-Installation
+Minimum Setup
 ------------
+Include the hashimage.php file in the code
+```php
+ //include the file
+ require_once 'path/to/hashimage.php'; 
+ //Create an object of hashimage class
+ $image = new hashimage();
+```
+
+Advanced Setup
+-------------
 Include the hashimage.php file in the code
 ```php
  require_once 'path/to/hashimage.php'; 
 ```
+Create an object of hashimage class
+```php
+ $image = new hashimage();
+```
+
+
 
 
 
