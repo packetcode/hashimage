@@ -7,12 +7,24 @@ body{
 	font-family:sans-serif;
 	-ms-text-size-adjust:100%;
 	background:#f8f8f8;
+			color:#34495e;
+}
+ul{
+	padding:0px;
+	margin:0px;
+}
+li{
+	padding:4px;
+	list-style-type: none;
 }
 .container{
 	margin:50px auto;
 	width:500px;
 	background:White;
 	padding: 40px
+}
+p{
+	line-height: 23px;
 }
 .logo{
 	text-align: center;
