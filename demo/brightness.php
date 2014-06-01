@@ -1,5 +1,5 @@
 <?php
-	require_once '../hashimage.php';
+	require_once ('../hashimage.php');
 
 	//create a hashimage object
 	$image = new hashimage();
