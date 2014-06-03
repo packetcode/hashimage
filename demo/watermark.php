@@ -23,11 +23,11 @@
 	/*
 		Examples:
 		
-			watermark(function(e){
-				e->size = 20;
-				e->padding = 10;
-				e->opacity = 3;
-				3->position = 'topright';
+			watermark(function($e){
+				$e->size = 20;
+				$e->padding = 10;
+				$e->opacity = 3;
+				$e->position = 'topright';
 			});
 	*/
 
