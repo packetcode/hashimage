@@ -2,7 +2,9 @@
 
 A Simple image manipulation library using php. Its written with object oriented principles with a footprint of hardly 15kb.The php method chaining and anonymous functions makes the code very simple to use and performance is superb... you can give a try :) 
 
-website: http://www.hashimage.com
+LIVE DEMO : https://hashimage.com/editor
+REFERENCE : https://hashimage.com/library
+
 
 FEATURES
 --------
